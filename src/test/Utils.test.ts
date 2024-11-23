@@ -8,23 +8,13 @@ describe("Utils test suite" , () => {
             console.log("Start");
             sut = new StringUtils();
         })
-
-        describe("" , () => {
-            // it.todo("To do 1")
-            it("Should be 10" , () => {
-                expect(sut.toUpperCase("Amir")).toBe("AMIR")
-            })
-            // it.todo("To do 2")
+        // describe("" , () => {
+        // it.todo("To do 1")
+        // it.todo("To do 2")
+        // })
+        it.only("Should be 10" , () => {
+            expect(sut.toUpperCase("Amir")).toBe("AMIR")
         })
-
-
-
-
-
-
-
-
-
 
 
         // afterEach(()=>{
