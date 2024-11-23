@@ -1,4 +1,4 @@
-import { getStringInfo, StringUtils, toUpperCase } from "../app/Utils"
+import {  StringUtils } from "../app/Utils"
 
 describe("Utils test suite" , () => {
 
@@ -12,7 +12,7 @@ describe("Utils test suite" , () => {
         // it.todo("To do 1")
         // it.todo("To do 2")
         // })
-        it.only("Should be 10" , () => {
+        it("Should be 10" , () => {
             expect(sut.toUpperCase("Amir")).toBe("AMIR")
         })
 
