@@ -20,3 +20,9 @@ export function getStringInfo(arg : string) : stringInfo{
         extraInfo : {}
     }
 }
+
+export class StringUtils{
+    toUpperCase(arg : string){
+        return arg.toUpperCase();
+    }
+}
