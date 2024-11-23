@@ -41,6 +41,23 @@ describe("PasswordChecker test suite" , () => {
         expect(actual.reasons).not.toContain(PasswordErrors.NO_LOWER_CASE)
     })
 
+    it("Complex password is valid" , () => {
+        const actual =  sut.checkPassword("Xdgxcx@200#3");
+        expect(actual.reasons).toHaveLength(0);
+        expect(actual.valid).toBeTruthy();
+    })
+
+    it("Admin password with no number is invalid" , () => {
+        const actual =  sut.checkAdminPassword("Xdgxcx@#");
+        expect(actual.valid).toBeFalsy();
+        expect(actual.reasons).toContain(PasswordErrors.NO_NUMBER);
+    })
+
+    it("Admin password with number is valid" , () => {
+        const actual =  sut.checkAdminPassword("Xdgxcx@200#3");
+        expect(actual.valid).toBeTruthy();
+        expect(actual.reasons).not.toContain(PasswordErrors.NO_NUMBER);
+    })
 
     // it("Password with less than 8 chars is invalid" , () => {
     //     const actual = sut.checkPassword("1234567");
