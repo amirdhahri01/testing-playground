@@ -22,7 +22,7 @@ export function getStringInfo(arg : string) : stringInfo{
 }
 
 export class StringUtils{
-    toUpperCase(arg : string){
+    public toUpperCase(arg : string){
         return arg.toUpperCase();
     }
 }

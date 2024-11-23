@@ -2,12 +2,66 @@ import { getStringInfo, StringUtils, toUpperCase } from "../app/Utils"
 
 describe("Utils test suite" , () => {
 
-    describe("StringUtils tests" , () => {
-        it("Should return correct uppercase", ()=>{
-            const sut = new StringUtils();
-            const actual = sut.toUpperCase("abc");
-            expect(actual).toBe("ABC")
-        })  
+    describe.only("StringUtils tests" , () => {
+        let sut : StringUtils;
+        beforeEach(()=>{
+            console.log("Start");
+            sut = new StringUtils();
+        })
+
+        describe("" , () => {
+            // it.todo("To do 1")
+            it("Should be 10" , () => {
+                expect(sut.toUpperCase("Amir")).toBe("AMIR")
+            })
+            // it.todo("To do 2")
+        })
+
+
+
+
+
+
+
+
+
+
+
+        // afterEach(()=>{
+        //     console.log("Teardown");
+        // })
+        // it.only("Should return correct uppercase", ()=>{
+        //     const actual = sut.toUpperCase("abc");
+        //     expect(actual).toBe("ABC")
+        // })  
+        // it.only("Should throw error on invalid argument - function", ()=>{
+        //     function expectErorr(){
+        //         const actual = sut.toUpperCase("");
+        //     }
+        //     expect(expectErorr).toThrow("Invalid input")
+        // })  
+        // it.only("Should throw error on invalid argument - arow function", ()=>{
+        //     expect(() => {const actual = sut.toUpperCase("");}).toThrow("Invalid input")
+        // }) 
+        // it.only("Should throw error on invalid argument - try catch block", ()=>{
+        //     try {
+        //         sut.toUpperCase("")
+        //     } catch (error) {
+        //         expect(error).toBeInstanceOf(Error);
+        //         expect(error).toHaveProperty("message" , "Invalid input")
+        //     }
+        // })   
+        
+        // it.only("Should throw error on invalid argument - try catch block", (done)=>{
+        //     try {
+        //         sut.toUpperCase("")
+        //         done("getStringInfo  should throw error for invalid arg!")
+        //     } catch (error) {
+        //         expect(error).toBeInstanceOf(Error);
+        //         expect(error).toHaveProperty("message" , "Invalid input")
+        //         done()
+        //     }
+        // }) 
     })
 
     // it("Should return uppercase of a valid string" , () => {
