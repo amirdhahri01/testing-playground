@@ -1,7 +1,7 @@
 import type { Config } from "@jest/types";
 
-const baseDir = "<rootDir>/src/app/doubles";
-const baseTestDir = "<rootDir>/src/test/doubles";
+const baseDir = "<rootDir>/src/app/testing_styles";
+const baseTestDir = "<rootDir>/src/test/testing_styles";
 
 const config : Config.InitialOptions = {
   preset:"ts-jest",

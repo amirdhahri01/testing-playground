@@ -8,6 +8,14 @@ export type stringInfo = {
 
 type loggerServiceCallBack = (arg : string) => void;
 
+export function toUpperCase(arg : string){
+    return arg.toUpperCase();
+}
+
+export function toLowerCaseWithID(arg : string){
+    return arg.toLowerCase();
+}
+
 export function calculateComplexity(stringInfo : stringInfo){
     return Object.keys(stringInfo.extraInfo).length  * stringInfo.length;
 }
