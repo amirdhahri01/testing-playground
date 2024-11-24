@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 export type stringInfo = {
     lowerCase : string, 
     upperCase : string, 
@@ -13,7 +15,7 @@ export function toUpperCase(arg : string){
 }
 
 export function toLowerCaseWithID(arg : string){
-    return arg.toLowerCase();
+    return arg.toLowerCase() + v4();
 }
 
 export function calculateComplexity(stringInfo : stringInfo){
