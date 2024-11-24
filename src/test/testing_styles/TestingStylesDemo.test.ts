@@ -1,8 +1,6 @@
 import { AwsomeDatabase } from "../../app/testing_styles/TestingStylesDemo"
 
 
-
-
 describe("Awesome db test suite" , () => {
 
     it("Should insert user" , () => {
